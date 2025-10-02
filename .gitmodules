@@ -1,0 +1,9 @@
+[submodule "app/src/main/cpp/third_party/openssl"]
+	path = app/src/main/cpp/third_party/openssl
+	url = https://github.com/openssl/openssl.git
+[submodule "app/src/main/cpp/third_party/curl"]
+	path = app/src/main/cpp/third_party/curl
+	url = https://github.com/curl/curl.git
+[submodule "app/src/main/cpp/third_party/zlib"]
+	path = app/src/main/cpp/third_party/zlib
+	url = https://github.com/madler/zlib.git

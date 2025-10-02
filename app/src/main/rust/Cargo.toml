@@ -8,3 +8,5 @@ crate-type = ["cdylib"]
 
 [dependencies]
 jni = "0.21"
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "rustls-tls"] }
+libc = "0.2.176"
