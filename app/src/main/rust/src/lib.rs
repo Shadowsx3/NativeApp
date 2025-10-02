@@ -15,7 +15,7 @@ pub extern "system" fn Java_com_bassmd_nativeapp_MainActivity_stringFromJNI(
 
     // Perform a simple HTTP GET request and return the response text.
     // Note: Ensure the Android app has INTERNET permission in AndroidManifest.xml.
-    let result = fetch_text("https://www.lipsum.com/");
+    let result = fetch_text("https://jsonplaceholder.typicode.com/todos/2");
     let msg = result.unwrap_or_else(|e| format!("Request failed: {}", e));
 
     env.new_string(msg)
