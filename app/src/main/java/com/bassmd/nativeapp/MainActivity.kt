@@ -16,7 +16,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // Example of a call to a native method
-        binding.sampleText.text = stringFromJNI()
+        binding.sampleText.text = stringFromJNIC()
+        binding.sampleText2.text = stringFromJNI()
     }
 
     /**
@@ -25,8 +26,11 @@ class MainActivity : AppCompatActivity() {
      */
     external fun stringFromJNI(): String
 
+    external fun stringFromJNIC(): String
+
     companion object {
         init {
+            System.loadLibrary("rust")
             System.loadLibrary("nativeapp")
         }
     }
