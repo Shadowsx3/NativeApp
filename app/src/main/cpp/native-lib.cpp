@@ -17,11 +17,9 @@ static size_t WriteCallback(void *contents, size_t size, size_t nmemb, std::stri
     return newLength;
 }
 
-extern "C" JNICALL
-Java_com_example_nativeapp_MainActivity_stringFromJNI(
-        JNIEnv* env,
-        jobject /* this */) {
-
+extern "C"
+JNIEXPORT jstring JNICALL
+Java_com_bassmd_nativeapp_MainActivity_stringFromJNIC(JNIEnv * env, jobject /* this */) {
     // Initialize CURL
     CURL *curl;
     CURLcode res;
@@ -68,4 +66,3 @@ Java_com_example_nativeapp_MainActivity_stringFromJNI(
     return env->NewStringUTF(readBuffer.c_str());
 }
 
-// Make sure your MainActivity.java has a matching package name, e.g., com.example.nativeapp
